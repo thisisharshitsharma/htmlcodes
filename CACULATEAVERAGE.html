@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function average(){
+            var a=parseInt(document.a.s1.value);
+            var b=parseInt(document.a.s2.value);
+            var c=parseInt(document.a.s3.value);
+            var d=parseInt(document.a.s4.value);
+            var e=parseInt(document.a.s5.value);
+            average=(a+b+c+d+e)/5;
+            document.a.avg.value=average;
+            if((a || b || c || d || e)>100){
+                alert("Please enter valid marks");
+            }
+            else if(a>80){
+                document.a.a.value="A";
+            }
+            else if(a>60){
+                document.a.a.value="B";
+            }
+            else if(a>40){
+                document.a.a.value="C";
+            }
+            else{
+                document.a.a.value="Fail";
+            }
+        }
+    </script>
+    <style>
+        form{
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+             </style>
+</head>
+<body>
+    <form name="a">
+        <fieldset>
+            <legend>HTML webpage to to calculate average of marks of students </legend>
+        Enter marks of the first subject: <input type="text" name="s1"><br>
+        Enter marks of the second subject: <input type="text" name="s2"><br>
+        Enter marks of the third subject: <input type="text" name="s3"><br>
+        Enter marks of the Fourth subject: <input type="text" name="s4"><br>
+        Enter marks of the Fifth subject: <input type="text" name="s5"><br>
+        Percentage<output name="avg"></output><br>
+        Grade: <output name="a"></output><br>
+
+        
+        <input type="button" value="caculate" onclick="average()">
+    </fieldset>
+    </form>
+    
+</body>
+</html>
